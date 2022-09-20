@@ -1,0 +1,46 @@
+
+.container{
+    width: 600px;
+    height: 400px;
+    padding-top:50px;
+    border-radius: 20px;
+    margin:0 auto;
+    background-image: url(../img/background.jpg) ;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size:cover;
+}
+.title{
+    font-size: xx-large;
+    text-align: center;
+}
+.inputbox{
+    width: 600px;
+    margin-top: 30px;
+    text-align: center;
+    display: flex;
+    font-size: large;
+    border-radius: 5px;
+}
+
+.button{
+    width: 80px;
+    height: 40px;
+    margin-left: 20px;
+    margin-right:20px;
+    border-radius: 5px;
+    border-width: 1px;
+}
+.button :hover{
+    color: azure;
+}
+.buttonbox{
+    margin-top: 70px;
+    text-align: center;   
+}
+.text{
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+    border-width: 1px;
+}

@@ -1,0 +1,35 @@
+.buttonbox{
+    text-align: center;
+}
+.btn{
+    height: 40px;
+    width:80px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 8px;
+    border-width: 1px;
+}
+.content{
+    width: 800px;
+    height:700px;     
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: rgb(255, 216, 223);
+}
+#Express{
+    width: 40%;
+    height: 150px;
+    padding: 6px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ff67e7;
+    border-radius: 4px;
+    background-color: #d966ff;
+    resize: none;
+}
+.btn_submit{
+    margin-top: 20px;
+    height: 40px;
+    width: 60px;
+    border-radius: 10px;
+    border-width: 1px;
+}

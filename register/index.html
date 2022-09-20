@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../src/css/login.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.14/vue.min.js"></script>
+    <script src="../src/js/submit.js"></script>
+</head>
+<body>
+    <div class="container" id="app">
+        <div class="title">注册</div>
+        <div style="margin: 0 150px;">
+            <div class="inputbox" >
+                用&nbsp;户&nbsp;名:&nbsp;<input type="text" class="text" v-model="info.username" placeholder="username" name="" id="">
+            </div>
+            <div class="inputbox" >
+                密&nbsp;&nbsp;&nbsp;&nbsp;码:&nbsp;&nbsp;<input type="password" class="text" v-model="info.password" placeholder="password" name="" id="">
+            </div>
+            <div class="inputbox" >
+                重复密码:<input type="password" class="text" v-model="info.repeatpwd" placeholder="repeatpwd" name="" id="">
+            </div>
+        </div>
+        <div class="buttonbox" >
+            <button class="button" @click="register">注册</button>
+            <button class="button" onclick="returnBack()">返回</button>
+        </div>
+    </div>
+</body>
+<script src="../src/js/link.js"></script>
+<script src="../src/js/submit.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+    new Vue({
+    el:"#app",
+    data: {
+        info:{
+            username: "",
+            password: "",
+            repeatpwd:""
+        }
+    },
+    methods:{
+        register(){
+            if (this.info.password!=this.info.repeatpwd){
+                alert("您的两次密码不一致，请重新输入！");
+            }
+            const url="http://localhost:8080/register";
+            var data={};
+            data.username=this.info.username;
+            data.password=this.info.password;
+            console.log(data);
+            $.ajax({
+                url:url,
+                data:JSON.stringify(data),
+                method:'POST',
+                success:(res)=>{
+                    console.log(res);
+                }
+            })
+        }
+    }
+})
+</script>
+</html>

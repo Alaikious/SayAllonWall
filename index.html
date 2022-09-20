@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>表白墙</title>
+</head>
+<link rel="stylesheet" href="./src/css/index.css">
+<body>
+    <div class="content">
+        <h1 style="text-align:center;color:blueviolet">
+            表白墙
+        </h1>
+        <div class="buttonbox">
+            <button class="btn" onclick="gotoRegister()">注册</button>
+            <button class="btn" onclick="gotoLogin()">登录</button>
+        </div>
+        <form target="_blank" style="text-align:center" name="ExpressWall" action="mongodb.js" method="get">
+            <label for="Express">我想说：</label>
+            <br/>
+            <textarea id="Express" name="Express">
+            </textarea>
+            <br/>
+            <label for="User">表白人：</label>
+            <input type="text" id="User" name="User">
+            <br/>
+            <div >
+                <input class="btn_submit" type="submit" id="submit" value="提交">
+            </div>
+        </form>
+    </div>
+</body>
+<script src="./src/js/link.js"></script>
